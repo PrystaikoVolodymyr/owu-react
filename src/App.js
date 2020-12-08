@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import User from "./component/user/User";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+    users=[
+        {name: `Vova`,age:19},
+        {name: `Mikel`,age:14},
+        {name: `Sveta`,age:42},
+        {name: `Roma`,age:43}
+    ]
+    render() {
+        return (
+            <div>
+                {
+                    this.users.map(((value, index) => {
+                        return <User item={value} key={index}/>
+                    }))
+                }
+            </div>
+        );
+    }
 }
 
 export default App;
