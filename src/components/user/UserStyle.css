@@ -1,0 +1,16 @@
+.one{
+    background: aqua;
+    border: 4px solid black;
+    margin: 5px;
+}
+.two{
+    background: burlywood;
+    border: 4px solid black;
+    margin: 5px;
+
+}
+
+button{
+    float: right;
+    margin-right:  50px;
+}
