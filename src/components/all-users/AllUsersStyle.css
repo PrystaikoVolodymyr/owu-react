@@ -1,0 +1,9 @@
+.header{
+    background: #31b428;
+    margin: 5px;
+    text-align: center;
+}
+hr{
+    border-color: red;
+    border-width: 2px;
+}

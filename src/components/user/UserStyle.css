@@ -1,0 +1,17 @@
+.one{
+    background: aqua;
+    margin: 3px;
+    border: solid #0c3eaf 5px;
+}
+.two{
+    background: bisque;
+    margin: 3px;
+    border: solid #9a0766 5px;
+}
+.btnStyle{
+    float: right;
+    margin-right: 100px;
+    border-radius: 5px;
+    color: white;
+    background: black;
+}
