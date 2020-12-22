@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import UserService from "../services/UserService";
 import User from "../user/User";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 class AllUsers extends Component {
 
@@ -10,12 +16,15 @@ class AllUsers extends Component {
 
     async componentDidMount() {
         let users=await this.UserService.getAllUsers()
-        this.setState(users)
+        this.setState({users})
+
     }
+
 
 
     render() {
 let {users}=this.state
+        console.log(users)
         return (
             <div>
                 {users.map((value, index) => {
@@ -24,6 +33,14 @@ let {users}=this.state
                     key={index}
                     />
                 })}
+                <hr/>
+                <hr/>
+                <Switch>
+                    <Route path={`/users/:id`} render={()=>{
+                        return `dsfdsff`
+                    }}/>
+
+                </Switch>
             </div>
         );
     }
